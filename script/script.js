@@ -6,13 +6,31 @@ let hours = 0;
 let minute = 0;
 let seconds = 0;
 
+let intervalId = null;
 
 playButton.addEventListener('click', () => {
 
-  play();
+  if(intervalId === null){
+    intervalId = setInterval(play, 1000);
+    playButton.innerHTML = 'Pause';
+  }else{
+    clearInterval(intervalId);
+    intervalId = null;
+    playButton.innerHTML = 'Play';
 
-})
-timerHse.innerHTML = playButton;
+  }
+
+});
+
+resetButton.addEventListener('click', () => {
+    clearInterval(intervalId);
+    intervalId = null;
+    hours = 0;
+    minute = 0;
+    seconds = 0;
+    displayTime();
+    playButton.innerHTML = 'Play';
+});
 
 function play(){
     seconds++;
@@ -25,4 +43,9 @@ function play(){
             hours++;
         }
     }
+    displayTime();
+}
+
+function displayTime(){
+    timerHse.innerHTML = `${hours.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
 }
