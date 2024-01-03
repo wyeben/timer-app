@@ -1,12 +1,18 @@
-body{
-    background-image: url(C:\Users\Wyeben\Desktop\timer\images\mohammad-metri-1oKxSKSOowE-unsplash.jpg);
-   display: flex;
-   justify-content: center;
-
+body {
+    background-image: url('../images/mohammad-metri-1oKxSKSOowE-unsplash.jpg');
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
+
 .main{
-    background-color: rgb(57, 68, 68);
+    background-color: rgb(57, 68, 68, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +26,7 @@ body{
 }
 
 .timer-hse{
-    background-color: black;
+    background-color: rgb(20, 19, 19, 0.5);
     color: white;
     height: 200px;
     width: 200px;
@@ -46,8 +52,17 @@ body{
     color: white;
 }
 
-.Pause{
-    background-color: yellow;
+.pause-btn{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(135, 128, 236);
+    color: rgb(16, 108, 245);
+}
+
+.pause-btn:hover{
+    background-color: rgb(135, 128, 236);
+    color: white;
 }
 
 .reset-btn{

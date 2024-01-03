@@ -15,10 +15,14 @@ playButton.addEventListener('click', () => {
   if(intervalId === null){
     intervalId = setInterval(play, 1000);
     playButton.innerHTML = 'Pause';
+    playButton.classList.remove('play-btn');
+    playButton.classList.add('pause-btn');
   }else{
     clearInterval(intervalId);
     intervalId = null;
     playButton.innerHTML = 'Play';
+    playButton.classList.remove('pause-btn');
+    playButton.classList.add('play-btn');
 
   }
 
@@ -32,6 +36,8 @@ resetButton.addEventListener('click', () => {
     seconds = 0;
     displayTime();
     playButton.innerHTML = 'Play';
+    playButton.classList.remove('pause-btn');
+    playButton.classList.add('play-btn');
 });
 
 function play(){
