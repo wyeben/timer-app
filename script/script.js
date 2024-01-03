@@ -2,6 +2,8 @@ let timerHse = document.querySelector('.timer-hse');
 let playButton = document.querySelector('.play-btn');
 let resetButton = document.querySelector('.reset-btn');
 
+
+
 let hours = 0;
 let minute = 0;
 let seconds = 0;
