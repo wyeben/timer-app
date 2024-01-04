@@ -1,13 +1,9 @@
 body {
-    background-image: url('../images/mohammad-metri-1oKxSKSOowE-unsplash.jpg');
-    background-size: cover; 
-    background-position: center;
+    background: url('../images/mohammad-metri-1oKxSKSOowE-unsplash.jpg')no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -19,15 +15,14 @@ body {
     align-items: center;
     padding: 10px 10px;
     margin: 100px;
-    height: 300px;
-    width: 300px;
-    border-radius: 160px;
-
+    height: 320px;
+    width: 320px;
+    border-radius: 170px;
 }
 
 .timer-hse{
     background-color: rgb(20, 19, 19, 0.5);
-    color: white;
+    color: rgba(250, 244, 244, 0.5);
     height: 200px;
     width: 200px;
     border-radius: 100px;
@@ -77,5 +72,9 @@ body {
     background-color: red;
     color: white;
 
+}
+
+.name1{
+    color: rgb(247, 243, 243, 0.5);
 }
 
